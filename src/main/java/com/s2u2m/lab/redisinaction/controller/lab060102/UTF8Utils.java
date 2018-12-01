@@ -16,15 +16,10 @@
  *
  */
 
-package com.s2u2m.lab.redisinaction.util;
+package com.s2u2m.lab.redisinaction.controller.lab060102;
 
-import com.google.common.io.ByteStreams;
-
-import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
 import java.io.UnsupportedEncodingException;
 import java.nio.ByteBuffer;
-import java.util.Arrays;
 
 /**
  * UTF8Utils create on 2018/11/19
@@ -34,6 +29,9 @@ import java.util.Arrays;
 public final class UTF8Utils {
 
     public static final String UTF8 = "UTF-8";
+    /**
+     * {@literal https://zh.wikipedia.org/wiki/UTF-8}
+     */
     public static final int UTF8_MIN = 0x00000000;
     public static final int UTF8_MAX = 0xF7BFBFBF;
 
@@ -51,7 +49,9 @@ public final class UTF8Utils {
         int suffix = tail != UTF8_MIN ? tail - 1 : UTF8_MIN;
         String suffixChar = convertInt2UTF8Char(suffix);
         String endChar = convertInt2UTF8Char(UTF8_MAX);
-        return builder.append(suffixChar).append(endChar).toString();
+        return builder
+                .append(suffixChar)
+                .append(endChar).toString();
     }
 
     public static String successor(String input)
