@@ -18,6 +18,7 @@
 
 package com.s2u2m.lab.redisinaction.util;
 
+import com.s2u2m.lab.redisinaction.controller.lab060102.UTF8Utils;
 import org.junit.Test;
 
 import java.io.UnsupportedEncodingException;

@@ -16,9 +16,8 @@
  *
  */
 
-package com.s2u2m.lab.redisinaction.controller;
+package com.s2u2m.lab.redisinaction.controller.lab060102;
 
-import com.s2u2m.lab.redisinaction.util.UTF8Utils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.DefaultTypedTuple;
 import org.springframework.data.redis.core.StringRedisTemplate;
